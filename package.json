@@ -1,0 +1,78 @@
+{
+  "name": "@identifi-protocol/sdk",
+  "version": "0.0.1-alpha.3",
+  "description": "Zero-knowledge proof VERIFICATION SDK for IdentiFI Protocol — validate ZK-SNARK proofs (Groth16) server-side via the IdentiFI API (V2)",
+  "author": "IdentiFI Protocol <contact@identifi.xyz>",
+  "license": "MIT",
+  "homepage": "https://github.com/IdentiFI-Protocol/identifi-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/IdentiFI-Protocol/identifi-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdentiFI-Protocol/identifi-sdk.git"
+  },
+  "keywords": [
+    "zk-snark",
+    "zero-knowledge",
+    "verifier",
+    "auditor",
+    "web3",
+    "wallet",
+    "privacy",
+    "defi",
+    "identity",
+    "ethereum",
+    "groth16",
+    "poseidon",
+    "sdk"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./provider": {
+      "types": "./dist/provider/EthProvider.d.ts",
+      "import": "./dist/provider/EthProvider.js",
+      "require": "./dist/provider/EthProvider.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "ethers": "^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ethers": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "ethers": "^6.17.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

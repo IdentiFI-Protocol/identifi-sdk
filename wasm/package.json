@@ -1,0 +1,15 @@
+{
+  "name": "identifi-core",
+  "type": "module",
+  "version": "2.0.0",
+  "files": [
+    "identifi_core_bg.wasm",
+    "identifi_core.js",
+    "identifi_core.d.ts"
+  ],
+  "main": "identifi_core.js",
+  "types": "identifi_core.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
